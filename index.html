@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Calculator</title>
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="styles.css" id="theme" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+
+      <h1>Calculator</h1><br><br>
+      <div class="row first-row">
+        <div class="col col-lg-9 col-md-9 col-sm-9">
+          <input type="text" name="result" class="result" id="result" value="" placeholder="Result" readonly />
+        </div>
+        <div class="col col-lg-3 col-md-3 col-sm-3 col-3">
+          <input type="button" value="C" onclick="clearScreen()" id="clear" />
+        </div>
+      </div>
+
+      <div class="row second-row">
+        <div class="col col-lg-3">
+          <input type="button" value="1" onclick="liveScreen(1)" id="one" />
+        </div>
+        <div class="col col-lg-3">
+          <input type="button" value="2" onclick="liveScreen(2)" id="two" />
+        </div>
+        <div class="col col-lg-3">
+          <input type="button" value="3" id="three" onclick="liveScreen(3)" />
+        </div>
+        <div class="col col-lg-3">
+          <input type="button" value="+" onclick="liveScreen('+')" />
+        </div>
+
+      </div>
+      <div class="third-row row">
+        <div class="col col-lg-3">
+          <input type="button" value="4" id="four" onclick="liveScreen(4)" />
+        </div>
+        <div class="col col-lg-3">
+          <input type="button" value="5" id="five" onclick="liveScreen(5)" />
+        </div>
+        <div class="col col-lg-3">
+          <input type="button" value="6" id="six" onclick="liveScreen(6)" />
+        </div>
+        <div class="col col-lg-3">
+          <input type="button" value="-" onclick="liveScreen('-')" />
+        </div>
+      </div>
+
+      <div class="fourth-row row">
+        <div class="col col-lg-3">
+          <input type="button" value="7" id="seven" onclick="liveScreen(7)" />
+        </div>
+        <div class="col col-lg-3">
+          <input type="button" value="8" id="eight" onclick="liveScreen(8)" />
+        </div>
+        <div class="col col-lg-3">
+          <input type="button" value="9" id="nine" onclick="liveScreen(9)" />
+        </div>
+        <div class="col col-lg-3">
+          <input type="button" value="x" onclick="liveScreen('*')" />
+        </div>
+      </div>
+
+      <div class="fifth-row row">
+        <div class="col col-lg-3">
+          <input type="button" value="/" onclick="liveScreen('/')" />
+        </div>
+        <div class="col col-lg-3">
+          <input type="button" value="0" id="zero" onclick="liveScreen(0)" />
+        </div>
+        <div class="col col-lg-3">
+          <input type="button" value="." class="dot" onclick="liveScreen('.')" />
+        </div>
+        <div class="col col-lg-3">
+          <input type="button" value="=" onclick="result.value = eval(result.value||null)" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Fontawesome Script -->
+  <script src="https://kit.fontawesome.com/f28b055962.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
